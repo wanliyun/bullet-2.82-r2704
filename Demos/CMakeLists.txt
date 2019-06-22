@@ -62,6 +62,7 @@ ELSE (USE_GLUT)
 		SoftDemo
 		VectorAdd_OpenCL
 		VoronoiFractureDemo
+		LwkRaycastDemo
 	)
 	ENDIF(WIN32)
 ENDIF (USE_GLUT)

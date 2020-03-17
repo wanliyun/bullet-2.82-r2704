@@ -281,8 +281,8 @@ void CollisionScene::loadTerrain(btCollisionWorld & world, std::ifstream & is)
 	is.read((char*)&stickHeight, sizeof(int));
 	btVector3 scale;  ReadVec3(is, scale);
 	float minHeight, maxHeight;
-	is.read((char*)&minHeight, sizeof(int));
-	is.read((char*)&maxHeight, sizeof(int));
+	is.read((char*)&minHeight, sizeof(float));
+	is.read((char*)&maxHeight, sizeof(float));
 	int upAix;
 	is.read((char*)&upAix, sizeof(int));
 

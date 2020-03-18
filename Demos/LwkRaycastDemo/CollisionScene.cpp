@@ -296,16 +296,10 @@ void CollisionScene::loadTerrain(btCollisionWorld & world, std::ifstream & is)
 	heightFieldShape->setUseDiamondSubdivision(true);
 
 	heightFieldShape->setLocalScaling(scale);
-	btVector3 mmin, mmax;
-	heightFieldShape->getAabb(btTransform::getIdentity(), mmin, mmax);
 
-	mmax.setZ(-mmax.getZ());
-	trans += mmax;
 	btTransform startTransform;
 	startTransform.setIdentity();
 	startTransform.setOrigin(trans);
-
-	heightFieldShape->getAabb(startTransform, mmin, mmax);
 
 	localCreateRigidBody(world, startTransform, heightFieldShape);
 }
